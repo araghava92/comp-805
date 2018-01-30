@@ -14,69 +14,39 @@ Please see: https://www.python.org/dev/peps/pep-0008/ for style guidelines
 """
 
 def give_me_a_string():
-    """
-    This function returns a string value
-    """
-    pass
+    return "This function returns a string value."
 
 def give_me_an_integer():
-    """
-    This function returns an integer value
-    """
-    pass
+    return 1
 
 def give_me_a_boolean():
-    """
-    This function returns a boolean value
-    """
-    pass
+    return True
 
 def give_me_a_float():
-    """
-    This function returns a float value
-    """
-    pass
+    return 1.0
 
 def give_me_a_list():
-    """
-    This function returns a list
-    """
-    pass
+    return ["this", "is", "a", "list"]
 
 def give_me_a_dictionary():
-    """
-    This function returns a dictionary
-    """
-    pass
+    return {"first": "entry"}
 
 def give_me_a_tuple():
-    """
-    This function returns a tuple
-    """
-    pass
+    return (1, )
 
 def sum_numbers_one_to_ten():
-    """
-    This function returns the sum of all numbers one to ten
-    Use the range function:
-    https://docs.python.org/3/library/functions.html
-    Use the accumulator pattern:
-    http://interactivepython.org/runestone/static/thinkcspy/Functions/TheAccumulatorPattern.html
-    """
-    pass
+    return sum(range(1, 11))
 
 def check_is_even(number):
-    """
-    This function returns True if num is even
-    else False
-    hint: use modulo operator
-    https://docs.python.org/3/reference/expressions.html
-    """
-    pass
+    return number % 2 == 0
 
 def check_is_less_than(number1, number2):
-    """
-    This functions returns True if number1 < number2
-    else False
-    """
-    pass
+    return number1 < number2
+
+# Additional method - 1
+def check_is_odd(number):
+    return number % 2 != 0
+
+# Additional method - 2
+def check_is_greater_than(number1, number2):
+    return number1 > number2

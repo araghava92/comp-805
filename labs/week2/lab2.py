@@ -5,6 +5,7 @@ RAGHAVA ADUSUMILLI
 """
 import re
 
+
 #1  Function Interface:
 def squared_nums(num_list):
     """

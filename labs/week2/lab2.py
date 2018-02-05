@@ -32,3 +32,17 @@ def  check_title(title_list):
             res_list.append(title)
 
     return res_list
+
+
+def restock_inventory(inventory):
+    """
+    Increases inventory of each item in dictionary by 10
+    inventory: A dictionary with:
+        key: string that is the name of the inventory item
+        value: integer that equals the number of that item currently on hand
+    Returns: Updated dictionary where each inventory item is restocked.
+    """
+    for key in inventory.keys():
+        inventory[key] = inventory[key] + 10
+
+    return inventory

@@ -20,3 +20,24 @@ def resume(request):
         summary= "Worked as a Full stack developer for 4 years"
     )
     return render(request, "resume.html", context={"resume": resume})
+
+
+def portfolio(request):
+    """
+    returns portfolio Homepage
+    """
+    portfolio = [
+        dict(
+            name= "Project 1", company= "Company 1", duration= "8 weeks",
+            description= "Worked using various opensource technologies",
+        ),
+        dict(
+            name= "Project 2", company= "Company 2", duration= "8 weeks",
+            description= "Worked using various opensource technologies",
+        ),
+        dict(
+            name= "Project 3", company= "Company 3", duration= "8 weeks",
+            description= "Worked using various opensource technologies",
+        ),
+    ]
+    return render(request, "portfolio.html", context={"portfolio": portfolio})

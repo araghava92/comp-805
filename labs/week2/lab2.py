@@ -46,3 +46,19 @@ def restock_inventory(inventory):
         inventory[key] = inventory[key] + 10
 
     return inventory
+
+
+def filter_0_items(inventory):
+    """
+    Removes items that have a value of 0 from a dictionary of inventories
+    inventory: Dictionary with:
+        key: string that is the name of the inventory item.
+        value: integer that equals the number of that item currently on hand.
+    Returns: the same inventory_dict with any item that had 0 quantity removed.
+    """
+    inventory_copy = inventory.copy()
+    for key in inventory_copy.keys():
+        if not bool(inventory[key]):
+            del inventory[key]
+
+    return inventory

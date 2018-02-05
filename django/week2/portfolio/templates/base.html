@@ -7,14 +7,16 @@
   <body>
     <div id="navbar">
       <ul id="menu-items">
-        <li class="menu-item"><a href="{% url portfolio:home %}">Home</a></li>
-        <li class="menu-item"><a href="{% url portfolio:resume %}">Resume</a></li>
-        <li class="menu-item"><a href="{% url portfolio:portfolio %}">Portfolio</a></li>
-        <li class="menu-item"><a href="{% url portfolio:contact %}">Contact</a></li>
+        <li class="menu-item"><a href="/">Home</a></li>
+        <li class="menu-item"><a href="#">Resume</a></li>
+        <li class="menu-item"><a href="#">Portfolio</a></li>
+        <li class="menu-item"><a href="#">Contact</a></li>
       </ul>
     </div>
-    <div id="content">
-      {% block content %}{% endblock %}
+    <div id="container">
+      <div id="content">
+        {% block content %}{% endblock %}
+      </div>
     </div>
   </body>
 </html>

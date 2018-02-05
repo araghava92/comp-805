@@ -41,3 +41,10 @@ def portfolio(request):
         ),
     ]
     return render(request, "portfolio.html", context={"portfolio": portfolio})
+
+
+def contact(request):
+    """
+    returns contact us page
+    """
+    return render(request, "contact.html", context=None)

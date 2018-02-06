@@ -47,4 +47,4 @@ def contact(request):
     """
     returns contact us page
     """
-    return render(request, "contact.html", context={"url": request.path})
+    return render(request, "contact.html", context=None)

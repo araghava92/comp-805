@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>{{ resume.name | title }}</h1>
-  <div id="heading">Email: </div>{{ resume.email }}
-  <div id="heading">Tel no.: </div>{{ resume.phone }}
-  <div id="heading">Summary: </div>
+  <div class="page-heading"> {{ resume.name | title }} </div>
+  <div class="line-heading">Email: </div>{{ resume.email }}
+  <div class="line-heading">Tel no.: </div>{{ resume.phone }}
   <p>
-    {{ resume.summary }}
+    <div class="line-heading">Summary: </div>
+      {{ resume.summary }}
   </p>
 {% endblock %}

@@ -3,14 +3,32 @@
 <html>
   <head>
     <title>Portfolio</title>
+
+    <link rel="stylesheet" href="{% static "css/index.css" %}"
   </head>
   <body>
     <div id="navbar">
       <ul id="menu-items">
-        <li class="menu-item"><a href="{% url "home" %}">Home</a></li>
-        <li class="menu-item"><a href="{% url "resume" %}">Resume</a></li>
-        <li class="menu-item"><a href="{% url "portfolio" %}">Portfolio</a></li>
-        <li class="menu-item"><a href="{% url "contact" %}">Contact</a></li>
+        <li class="menu-item">
+          <a href="{% url "home" %}" {% if request.path == "/" %} class="active" {% endif %}>
+            Home
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="{% url "resume" %}" {% if request.path|slice:"1:-1" == "resume" %} class="active" {% endif %}>
+            Resume
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="{% url "portfolio" %}" {% if request.path|slice:"1:-1" == "portfolio" %} class="active" {% endif %}>
+            Portfolio
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="{% url "contact" %}" {% if request.path|slice:"1:-1" == "contact" %} class="active" {% endif %}>
+            Contact
+          </a>
+        </li>
       </ul>
     </div>
     <div id="container">

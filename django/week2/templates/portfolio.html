@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div id="heading"> Projects: </div>
+  <div class="page-heading"> Projects: </div>
   <div id="projects">
     {% for project in portfolio %}
       <div class="project">
         <div id="pr-name">
-          <div id="sub-heading"> Name: </div> <p> {{ project.name }} </p>
+          <div class="line-heading"> Name: </div> {{ project.name|title }}
         </div>
         <div id="pr-company">
-          <div id="sub-heading"> Company: </div> <p> {{ project.name }} </p>
+          <div class="line-heading"> Company: </div> {{ project.name|title }}
         </div>
         <div id="pr-duration">
-          <div id="sub-heading"> duration: </div> <p> {{ project.duration }} </p>
+          <div class="line-heading"> duration: </div> {{ project.duration|title }}
         </div>
         <div id="pr-desc">
-          <div id="sub-heading"> Description: </div> <p> {{ project.description }} </p>
+          <div class="line-heading"> Description: </div> {{ project.description }}
         </div>
       </div>
     {% endfor %}

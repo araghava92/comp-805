@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-heading"> Contact us</div>
+  <div class="contact-form">
+    <form>
+      <div class="contact-field">
+        <input type="text" placeholder="Name"/>
+      </div>
+      <div class="contact-field">
+        <input type="email" placeholder="email" />
+      </div>
+      <div class="contact-field">
+        <textarea rows="3" placeholder="description">
+        </textarea>
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+
+{% endblock %}

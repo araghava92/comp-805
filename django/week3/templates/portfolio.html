@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-heading"> Projects: </div>
+  <div id="projects">
+    {% for project in portfolio %}
+      <div class="project">
+        <div id="pr-name">
+          <div class="line-heading"> Name: </div> {{ project.name|title }}
+        </div>
+        <div id="pr-company">
+          <div class="line-heading"> Company: </div> {{ project.name|title }}
+        </div>
+        <div id="pr-duration">
+          <div class="line-heading"> duration: </div> {{ project.duration|title }}
+        </div>
+        <div id="pr-desc">
+          <div class="line-heading"> Description: </div> {{ project.description }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

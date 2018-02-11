@@ -72,3 +72,13 @@ def test_title(names):
     """
     return list(filter(lambda x: x.istitle(), names)),
         list(list(filter(lambda x: not x.istitle(), names)))
+
+
+def keep_lowercase(strs):
+    """
+    Filters out strings that have uppercase values
+    strs: list of strings
+    Returns: list of strings that do not contain
+    uppercase values
+    """
+    return list(filter(lambda x: not any(map(lambda y: y.isupper(), x)), strs))

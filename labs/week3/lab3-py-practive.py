@@ -41,3 +41,12 @@ def square_nums(num_list):
     Returns: list from num_list which are squared
     """
     return list(map(lambda x: pow(x, 2), num_list))
+
+
+def double_nums(num_list):
+    """
+    Maps numbers in the num_list to their doubles
+    num_list: list of numbers
+    Returns: list of doubled numbers
+    """
+    return list(map(lambda x: x*2, num_list))

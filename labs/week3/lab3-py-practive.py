@@ -31,3 +31,13 @@ def three_times_nums(num_list):
     Returns: list of numbers that are of three times the values in num_list
     """
     return list(map(lambda x: x*3, num_list))
+
+
+def square_nums(num_list):
+    """
+    Maps numbers in the num_list to numbers of same value, but squares the
+    number given
+    num_list: list of numbers
+    Returns: list from num_list which are squared
+    """
+    return list(map(lambda x: pow(x, 2), num_list))

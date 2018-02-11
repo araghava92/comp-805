@@ -22,3 +22,12 @@ def make_title(words):
     Returns: new list of titled words
     """
     return list(map(lambda x: x.title(), words))
+
+
+def three_times_nums(num_list):
+    """
+    Maps numbers in the num_list to numbers that are 3 times the original value
+    num_list: list of numbers
+    Returns: list of numbers that are of three times the values in num_list
+    """
+    return list(map(lambda x: x*3, num_list))

@@ -130,3 +130,12 @@ def multiplication_total_of(num_list):
     Returns: the multiplied total of the numbers in the num_list
     """
     return reduce(lambda x, y: x * y, num_list)
+
+
+def subtraction_of(number_list):
+    """
+    Subtracts the numbers in number_list
+    number_list: list of numbers
+    Returns: the difference of the numbers in the number_list
+    """
+    return reduce(lambda x, y: x - y, number_list)

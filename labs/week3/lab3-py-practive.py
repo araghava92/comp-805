@@ -3,6 +3,7 @@ lab3 Python Practice
 RAGHAVA ADUSUMILLI
 2/13/2018
 """
+from functools import reduce
 
 
 def switch_case(str_list):
@@ -110,3 +111,13 @@ def greatest_difference(num_list):
     """
     num_list.sort()
     return num_list[-1:][0] - num_list[0]
+
+
+def create_word(letters):
+    """
+    Takes a list of characters and creates a word (list with alpha chars only)
+    from them.
+    letters: list of letters
+    Returns: list that has alpha characters only
+    """
+    return reduce(lambda x, y: x + y, letters)

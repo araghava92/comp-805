@@ -91,3 +91,12 @@ def lessthan_5(num_list):
     Returns: list of numbers in the original list that are less than five
     """
     return list(filter(lambda x: x > 4, num_list))
+
+
+def remove_special_characters(string_list):
+    """
+    Filters out strings that have non-alphanumeric elements
+    char_list: list of strings
+    Returns: list of strings that have only letters or numbers in them
+    """
+    return list(filter(lambda x: x.isalpha() or x.isdigit(), string_list))

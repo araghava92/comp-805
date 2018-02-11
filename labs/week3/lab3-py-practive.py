@@ -100,3 +100,13 @@ def remove_special_characters(string_list):
     Returns: list of strings that have only letters or numbers in them
     """
     return list(filter(lambda x: x.isalpha() or x.isdigit(), string_list))
+
+
+def greatest_difference(num_list):
+    """
+    Finds the maximum and minimum numbers in a_list and computes the difference.
+    num_list: list of numbers
+    Returns: the difference between the maximum and minimum numbers in num_list
+    """
+    num_list.sort()
+    return num_list[-1:][0] - num_list[0]

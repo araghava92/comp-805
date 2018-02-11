@@ -82,3 +82,12 @@ def keep_lowercase(strs):
     uppercase values
     """
     return list(filter(lambda x: not any(map(lambda y: y.isupper(), x)), strs))
+
+
+def lessthan_5(num_list):
+    """
+    Filters out numbers less than five
+    num_list: list of numbers
+    Returns: list of numbers in the original list that are less than five
+    """
+    return list(filter(lambda x: x > 4, num_list))

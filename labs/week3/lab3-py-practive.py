@@ -70,8 +70,8 @@ def test_title(names):
     names: list of names
     Returns: both lists for review
     """
-    return list(filter(lambda x: x.istitle(), names)),
-        list(list(filter(lambda x: not x.istitle(), names)))
+    return (list(filter(lambda x: x.istitle(), names)),
+        list(filter(lambda x: not x.istitle(), names)))
 
 
 def keep_lowercase(strs):

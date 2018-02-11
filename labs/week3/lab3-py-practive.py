@@ -50,3 +50,15 @@ def double_nums(num_list):
     Returns: list of doubled numbers
     """
     return list(map(lambda x: x*2, num_list))
+
+
+def only_even(mixed_list):
+    """
+    Filters out odd integers and strings that contain an odd number of
+    characters.
+    mixed_list: list of integers and/or strings
+    Returns: list of only integers and strings that are even or have an even
+    number of characters.
+    """
+    return list(filter(lambda x: not bool(x % 2) if isinstance(x, int)
+        else (not bool(len(x) % 2) if isinstance(x, str) else False), mixed_list))

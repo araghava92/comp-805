@@ -13,3 +13,12 @@ def switch_case(str_list):
     Returns: list of original strings with opposite casing for first letter
     """
     return list(map(lambda x: x[0].swapcase() + x[1:], str_list))
+
+
+def make_title(words):
+    """
+    Maps words in a list to words in the same list, but as titled strings.
+    words: list of words
+    Returns: new list of titled words
+    """
+    return list(map(lambda x: x.title(), words))

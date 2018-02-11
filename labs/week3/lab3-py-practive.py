@@ -121,3 +121,12 @@ def create_word(letters):
     Returns: list that has alpha characters only
     """
     return reduce(lambda x, y: x + y, letters)
+
+
+def multiplication_total_of(num_list):
+    """
+    Multiplies all the numbers in num_list together and gives the total
+    num_list: list of numbers
+    Returns: the multiplied total of the numbers in the num_list
+    """
+    return reduce(lambda x, y: x * y, num_list)

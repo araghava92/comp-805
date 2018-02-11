@@ -62,3 +62,13 @@ def only_even(mixed_list):
     """
     return list(filter(lambda x: not bool(x % 2) if isinstance(x, int)
         else (not bool(len(x) % 2) if isinstance(x, str) else False), mixed_list))
+
+
+def test_title(names):
+    """
+    Filters out capitalized and non-cap words into their respective lists.
+    names: list of names
+    Returns: both lists for review
+    """
+    return list(filter(lambda x: x.istitle(), names)),
+        list(list(filter(lambda x: not x.istitle(), names)))

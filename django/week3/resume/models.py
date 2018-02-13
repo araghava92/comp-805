@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# Experience model
 class Experience(models.Model):
     title = models.CharField(max_length=255, null=False, blank=False)
     location = models.CharField(max_length=100, null=False, blank=False)
@@ -12,7 +12,7 @@ class Experience(models.Model):
         return "{}, {}, {}, {}, {}".format(self.title, self.location,
             self.start_date, self.end_date, self.description)
 
-
+# Education model
 class Education(models.Model):
     institution_name = models.CharField(max_length=255, null=False, blank=False)
     location = models.CharField(max_length=100, null=False, blank=False)

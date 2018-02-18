@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="page-heading"> Raghava Adusumilli </div>
+  <br />
+  <h3> Education </h3>
+  {% for edu in edu_set %}
+    <div class="line-heading">University Name: </div>{{ edu.university_name }} <br />
+    <div class="line-heading">Location: </div>{{ edu.location }} <br />
+    <div class="line-heading">Degree: </div>{{ edu.degree }} <br />
+    <div class="line-heading">Major: </div>{{ edu.major }} <br />
+    <div class="line-heading">GPA: </div>{{ edu.gpa }} <br />
+    <br />
+  {% endfor %}
+  <h3> Experience </h3>
+  {% for exp in exp_set %}
+    <div class="line-heading">Company Name: </div>{{ exp.company }} <br />
+    <div class="line-heading">Location: </div>{{ exp.location }} <br />
+    <div class="line-heading">Start Date: </div>{{ exp.start_date }} <br />
+    <div class="line-heading">End Date: </div>{{ exp.end_date }} <br />
+    <div class="line-heading">Description: </div>{{ exp.description }} <br />
+    <br />
+  {% endfor %}
+{% endblock %}

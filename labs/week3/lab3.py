@@ -12,6 +12,13 @@ def squared_nums(num_list):
     Squares numbers in num_list
     num_list: list of numbers
     Returns: list of these numbers squared
+
+    >>> squared_nums([1, 2, 3])
+    [1, 4, 9]
+    >>> squared_nums([])
+    []
+    >>> squared_nums([-1, -2])
+    [1, 4]
     """
     squared_nums_list = [ ]
     # Iterate num_list for numbers
@@ -21,15 +28,22 @@ def squared_nums(num_list):
     return squared_nums_list
 
 
-def  check_title(title_list):
+def check_title(title_list):
     """
     Removes strings in title_list that aren't title case
     title_list: list of strings
     Returns: list of strings that are titles
+
+    >>> check_title(["Hello World", "Hello_world", "Hello_World"])
+    ['Hello World', 'Hello_World']
+    >>> check_title(["123466", "137682746"])
+    []
+    >>> check_title([])
+    []
     """
     res_list = []
     for title in title_list:
-        if title.istitle( ) and title.isalpha( ):
+        if title.istitle( ):
             res_list.append(title)
 
     return res_list
@@ -42,6 +56,13 @@ def restock_inventory(inventory):
         key: string that is the name of the inventory item
         value: integer that equals the number of that item currently on hand
     Returns: Updated dictionary where each inventory item is restocked.
+
+    >>> restock_inventory({"1": 1, "2": 2, "3": 3}) == {'1': 11, '2': 12, '3': 13}
+    True
+    >>> restock_inventory({"-1": -1, "-2": -2,"-3": -3}) == {'-1': 9, '-2': 8,'-3': 7}
+    True
+    >>> restock_inventory({}) == {}
+    True
     """
     new_inventory = { }
     for key, val in inventory.items():
@@ -81,3 +102,8 @@ def average_grades(grades):
         avg_dict[name] = sum(grades_list) / len(grades_list)
 
     return avg_dict
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod( )

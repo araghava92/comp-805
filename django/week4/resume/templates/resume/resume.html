@@ -4,7 +4,7 @@
   <div class="page-heading"> Raghava Adusumilli </div>
   <br />
   <h3> Education </h3>
-  {% for edu in edu_set %}
+  {% for edu in resume.get_education %}
     <div class="line-heading">University Name: </div>{{ edu.university_name }} <br />
     <div class="line-heading">Location: </div>{{ edu.location }} <br />
     <div class="line-heading">Degree: </div>{{ edu.degree }} <br />
@@ -13,7 +13,7 @@
     <br />
   {% endfor %}
   <h3> Experience </h3>
-  {% for exp in exp_set %}
+  {% for exp in resume.get_experience %}
     <div class="line-heading">Company Name: </div>{{ exp.company }} <br />
     <div class="line-heading">Location: </div>{{ exp.location }} <br />
     <div class="line-heading">Start Date: </div>{{ exp.start_date }} <br />
